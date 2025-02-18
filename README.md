@@ -13,6 +13,8 @@ St. Jude has a vast collection of historical and contemporary images, many of wh
 
 For reference, a full summary of our key features and methods can be found in our [Midpoint](https://docs.google.com/presentation/d/1AP4NmQQlVEgihZhwihh5qDjf50fEecxssAKANuMRVBA/edit?usp=sharing) and [Final](https://docs.google.com/presentation/d/1r0JZJco-kXUPgAh32-N4EHrFfciWJEMUbeBc9vetMWg/edit?usp=sharing) presentations. 
 
+We'd like to note that we have formatted this repository in terms of jupyter notebooks, rather than python files, to make the workstream with our models easier to understand. Please reach out if any of the files are confusing or difficult to work with!
+
 ### Preprocessing
 - Ensured completeness and correctness of metadata
 - Created a sample dataset of well-documented images for training and evaluation
@@ -33,7 +35,7 @@ The sample assets contained human-generated metadata, which we used to evaluate 
 - [Sbert: Sentence-BERT](https://arxiv.org/abs/1908.00897)
 - [USE: Universal Sentence Encoder](https://ai.google/research/google-research/2020/10/using-unsupervised-similarity-to-improve-ai-models.html)
 
-## Example Usage
+## Sample Usage
 
 0. Download Images
 Please coordinate with the team at St. Jude's for access to sampled assets. For future steps, we will assume that you have already downloaded images to a folder named "Labelled Assets".
@@ -48,9 +50,17 @@ python -m pip install jupyter
 jupyter notebook
 ```
 
-2. Download Datasets
+2. Preprocessing
+
+Run ```preprocessing/data_analysis.ipynb``` or ```preprocessing/starter_code.ipynb``` to get a sense of the file structure
 
 3. Run Generation Script (preprocessing will occur as a side effect)
+
+Run ```prediction/paligemma.ipynb``` to get image descriptions in a data sheet format
+
+4. Run Evaluation Scripts
+
+Feed the prediction results to ```evaluation/use_sbert_clip.ipynb``` evaluate them based on a human-made metadata
 
 ## Next Steps
 1. Optimize performance for deployment
