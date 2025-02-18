@@ -38,12 +38,14 @@ The sample assets contained human-generated metadata, which we used to evaluate 
 0. Download Images
 Please coordinate with the team at St. Jude's for access to sampled assets. For future steps, we will assume that you have already downloaded images to a folder named "Labelled Assets".
 
-1. Install Packages
+1. Setup Environment
 ```
 conda create -n acaptions python=3.10
 conda activate acaptions
 
-pip install -r requirements.txt
+python -m pip install jupyter
+
+jupyter notebook
 ```
 
 2. Download Datasets
